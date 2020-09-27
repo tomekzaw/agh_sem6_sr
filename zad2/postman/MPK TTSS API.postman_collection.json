@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "e255ef6b-97aa-4061-8ac8-2a07c9662707",
+		"name": "MPK TTSS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/geoserviceDispatcher/services/vehicleinfo/vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/vehicleinfo/vehicles",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"geoserviceDispatcher",
+						"services",
+						"vehicleinfo",
+						"vehicles"
+					],
+					"query": [
+						{
+							"key": "positionType",
+							"value": "CORRECTED",
+							"description": "string, optional, 'CORRECTED' (default) or 'RAW'",
+							"disabled": true
+						},
+						{
+							"key": "colorType",
+							"value": "ROUTE_BASED",
+							"description": "string, optional, 'ROUTE_BASED'",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns information about all vehicles with current line number, direction, route ID, trip ID, vehicle ID, GPS coordinates, heading etc."
+			},
+			"response": []
+		},
+		{
+			"name": "/geoserviceDispatcher/services/vehicleinfo/vehicles?lastUpdate={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/vehicleinfo/vehicles?lastUpdate=1584263123890",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"geoserviceDispatcher",
+						"services",
+						"vehicleinfo",
+						"vehicles"
+					],
+					"query": [
+						{
+							"key": "lastUpdate",
+							"value": "1584263123890",
+							"description": "timestamp, int, optional"
+						},
+						{
+							"key": "positionType",
+							"value": "CORRECTED",
+							"description": "string, optional, 'CORRECTED' (default) or 'RAW'",
+							"disabled": true
+						},
+						{
+							"key": "colorType",
+							"value": "ROUTE_BASED",
+							"description": "string, optional, 'ROUTE_BASED'",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns information about all vehicles with current line number, direction, route ID, trip ID, vehicle ID, GPS coordinates, heading etc."
+			},
+			"response": []
+		},
+		{
+			"name": "/geoserviceDispatcher/services/pathinfo/vehicle?id={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/pathinfo/vehicle?id=-1152921495396890018",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"geoserviceDispatcher",
+						"services",
+						"pathinfo",
+						"vehicle"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "-1152921495396890018",
+							"description": "vehicle ID, int, required"
+						}
+					]
+				},
+				"description": "Returns current GPS path for given vehicle ID"
+			},
+			"response": []
+		},
+		{
+			"name": "/geoserviceDispatcher/services/pathinfo/route?id={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/pathinfo/route?id=8095257447305839171",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"geoserviceDispatcher",
+						"services",
+						"pathinfo",
+						"route"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8095257447305839171",
+							"description": "route ID, int, required"
+						},
+						{
+							"key": "direction",
+							"value": null,
+							"description": "direction name, string, optional or empty ('')",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns paths for given route ID"
+			},
+			"response": []
+		},
+		{
+			"name": "/geoserviceDispatcher/services/pathinfo/route?id={}&direction={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/pathinfo/route?id=8095257447305839171&direction=Pod Fortem",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"geoserviceDispatcher",
+						"services",
+						"pathinfo",
+						"route"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8095257447305839171",
+							"description": "route ID, int, required"
+						},
+						{
+							"key": "direction",
+							"value": "Pod Fortem",
+							"description": "direction name, string, optional or empty ('')"
+						}
+					]
+				},
+				"description": "Returns paths for given route ID and direction"
+			},
+			"response": []
+		},
+		{
+			"name": "/geoserviceDispatcher/services/stopinfo/stops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/stopinfo/stops?left=-648000000&right=648000000&top=324000000&bottom=-324000000",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"geoserviceDispatcher",
+						"services",
+						"stopinfo",
+						"stops"
+					],
+					"query": [
+						{
+							"key": "left",
+							"value": "-648000000",
+							"description": "min lon, int, required (=180*3600000)"
+						},
+						{
+							"key": "right",
+							"value": "648000000",
+							"description": "max lon, int, required (=-180*3600000)"
+						},
+						{
+							"key": "top",
+							"value": "324000000",
+							"description": "max lat, int, required (=90*3600000)"
+						},
+						{
+							"key": "bottom",
+							"value": "-324000000",
+							"description": "min lat, int, required (=-90*3600000)"
+						}
+					]
+				},
+				"description": "Returns information about all stops in given rectangle"
+			},
+			"response": []
+		},
+		{
+			"name": "/services/routeInfo/route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/services/routeInfo/route",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"services",
+						"routeInfo",
+						"route"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "pl",
+							"description": "language code, string, optional",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns all available routes"
+			},
+			"response": []
+		},
+		{
+			"name": "/services/routeInfo/routeStops?routeId={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/services/routeInfo/routeStops?routeId=8095257447305839171",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"services",
+						"routeInfo",
+						"routeStops"
+					],
+					"query": [
+						{
+							"key": "routeId",
+							"value": "8095257447305839171",
+							"description": "route ID, int, required"
+						},
+						{
+							"key": "language",
+							"value": "pl",
+							"description": "language code, string, optional",
+							"disabled": true
+						},
+						{
+							"key": "cacheBuster",
+							"value": "1584261755022",
+							"description": "timestamp, int, optional",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns all stops for given route ID"
+			},
+			"response": []
+		},
+		{
+			"name": "/services/stopinfo/stopPoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/stopinfo/stopPoints?left=-648000000&right=648000000&top=324000000&bottom=-324000000",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"geoserviceDispatcher",
+						"services",
+						"stopinfo",
+						"stopPoints"
+					],
+					"query": [
+						{
+							"key": "left",
+							"value": "-648000000",
+							"description": "min lon, int, required (=180*3600000)"
+						},
+						{
+							"key": "right",
+							"value": "648000000",
+							"description": "max lon, int, required (=-180*3600000)"
+						},
+						{
+							"key": "top",
+							"value": "324000000",
+							"description": "max lat, int, required (=90*3600000)"
+						},
+						{
+							"key": "bottom",
+							"value": "-324000000",
+							"description": "min lat, int, required (=-90*3600000)"
+						}
+					]
+				},
+				"description": "Returns information about all stops points in given rectangle"
+			},
+			"response": []
+		},
+		{
+			"name": "/services/passageInfo/stopPassages/stop?stop={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/services/passageInfo/stopPassages/stop?stop=82",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"services",
+						"passageInfo",
+						"stopPassages",
+						"stop"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "pl",
+							"description": "language code, string, optional",
+							"disabled": true
+						},
+						{
+							"key": "stop",
+							"value": "82",
+							"description": "stop ID, int, required"
+						},
+						{
+							"key": "mode",
+							"value": "departure",
+							"description": "string, optional, 'departure' (default) or 'arrival'",
+							"disabled": true
+						},
+						{
+							"key": "startTime",
+							"value": "1584262800000",
+							"description": "timestamp, int, optional",
+							"disabled": true
+						},
+						{
+							"key": "timeFrame",
+							"value": "120",
+							"description": "time frame in minutes, int, optional, default 30, max 120",
+							"disabled": true
+						},
+						{
+							"key": "cacheBuster",
+							"value": "1584263446796",
+							"description": "timestamp, int, optional",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns departures or arrivals for given stop"
+			},
+			"response": []
+		},
+		{
+			"name": "/services/passageInfo/stopPassages/stopPoint?stopPoint={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/services/passageInfo/stopPassages/stopPoint?stopPoint=8202",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"services",
+						"passageInfo",
+						"stopPassages",
+						"stopPoint"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "pl",
+							"description": "language code, string, optional",
+							"disabled": true
+						},
+						{
+							"key": "stopPoint",
+							"value": "8202",
+							"description": "stop point ID, int, required"
+						},
+						{
+							"key": "mode",
+							"value": "departure",
+							"description": "string, optional, 'departure' (default) or 'arrival'",
+							"disabled": true
+						},
+						{
+							"key": "startTime",
+							"value": "1584262800000",
+							"description": "timestamp, int, optional",
+							"disabled": true
+						},
+						{
+							"key": "timeFrame",
+							"value": "120",
+							"description": "time frame in minutes, int, optional, default 30, max 120",
+							"disabled": true
+						},
+						{
+							"key": "cacheBuster",
+							"value": "1584263446796",
+							"description": "timestamp, int, optional",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns departures or arrivals for given stop point"
+			},
+			"response": []
+		},
+		{
+			"name": "/services/tripInfo/tripPassages?tripId={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/services/tripInfo/tripPassages?tripId=8095261304195637767",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"services",
+						"tripInfo",
+						"tripPassages"
+					],
+					"query": [
+						{
+							"key": "tripId",
+							"value": "8095261304195637767",
+							"description": "trip ID, int, required"
+						},
+						{
+							"key": "mode",
+							"value": "departure",
+							"description": "string, optional, 'departure' (default) or 'arrival'",
+							"disabled": true
+						},
+						{
+							"key": "vehicleId",
+							"value": "-1152921495396889438",
+							"description": "vehicle ID, int, optional",
+							"disabled": true
+						},
+						{
+							"key": "language",
+							"value": "pl",
+							"description": "language code, string, optional",
+							"disabled": true
+						},
+						{
+							"key": "cacheBuster",
+							"value": "1584263787983",
+							"description": "timestamp, int, optional",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns information about trip with given ID"
+			},
+			"response": []
+		},
+		{
+			"name": "/services/lookup/autocomplete/json?query={}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/services/lookup/autocomplete/json?query=bron",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"services",
+						"lookup",
+						"autocomplete",
+						"json"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "bron",
+							"description": "query, string, required"
+						},
+						{
+							"key": "language",
+							"value": "pl",
+							"description": "language code, string, optional",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Returns stops with names matching given query"
+			},
+			"response": []
+		},
+		{
+			"name": "/messages/language",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "pl,en-US;q=0.7,en;q=0.3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://ttss.mpk.krakow.pl/internetservice/messages/language",
+					"protocol": "http",
+					"host": [
+						"ttss",
+						"mpk",
+						"krakow",
+						"pl"
+					],
+					"path": [
+						"internetservice",
+						"messages",
+						"language"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "",
+							"description": "language code, string, optional",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Parses Accept-Language header and returns a suggested language version"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

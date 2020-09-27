@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "alerts";
+
+message Subscription {
+    repeated string hashtags = 1;
+}
+
+enum Importance {
+    UNKNOWN = 0;
+    LOW = 1;
+    MEDIUM = 2;
+    HIGH = 3;
+    CRITICAL = 4;
+}
+
+message Notification {
+    string message = 1;
+    repeated string hashtags = 2;
+    Importance importance = 3;
+}
+
+service Alerts {
+    rpc subscribe(Subscription) returns (stream Notification) {}
+}

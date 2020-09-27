@@ -1,0 +1,52 @@
+#
+# The client reads this property to create the reference to the
+# "hello" object in the server.
+#
+Calc1.Proxy=calc11:tcp -h localhost -p 10000:udp -h localhost -p 10000:ssl -h localhost -p 10001
+
+#
+# Warn about connection exceptions.
+#
+Ice.Warn.Connections=1
+
+#
+# Client-side ACM is enabled by default, with an interval of 60
+# seconds. For this demo, we want to use a short timeout of 10
+# seconds. By enabling network tracing below, you can see ACM
+# automatically close idle connections.
+#
+Ice.ACM.Client=10
+
+#
+# Network Tracing
+#
+# 0 = no network tracing
+# 1 = trace connection establishment and closure
+# 2 = like 1, but more detailed
+# 3 = like 2, but also trace data transfer
+#
+#Ice.Trace.Network=2
+
+#
+# Protocol Tracing
+#
+# 0 = no protocol tracing
+# 1 = trace protocol messages
+#
+#Ice.Trace.Protocol=1
+
+#
+# Security Tracing
+#
+# 0 = no security tracing
+# 1 = trace messages
+#
+#IceSSL.Trace.Security=1
+
+#
+# SSL Configuration
+#
+Ice.Plugin.IceSSL=IceSSL.PluginFactory
+IceSSL.DefaultDir=certs
+IceSSL.Keystore=client.jks
+IceSSL.Password=password

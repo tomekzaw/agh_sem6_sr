@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ line }} {{ direction }}</title>
+</head>
+<body>
+
+<h1>{{ line }} &rarr; {{ direction }}</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Przystanek</th>
+            {% for _ in trip_ids %}
+                <th>{{ loop.index }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for stop_seq_num, stop_num, stop_name in stops %}
+        <tr>
+            <td>&nbsp;<strong>{{ stop_seq_num }}. {{ stop_name }}</strong>&ensp;</td>
+            {% for trip_id in trip_ids %}
+                <td width="90" align="center">
+                {% if stop_num in delays[trip_id] %}
+                    {% set actual_time_str, delay = delays[trip_id][stop_num] %}                    
+                    {% if delay is not none %}
+                        <strong>{{ actual_time_str }}</strong>
+                        {% if delay == 0 %}
+                            <span style="color: green;">(OK)</span>
+                        {% elif delay > 3 %}
+                            <span style="color: red;">(+{{ delay }})</span>
+                        {% elif delay > 0 %}
+                            <span style="color: orange;">(+{{ delay }})</span>                         
+                        {% elif delay < -3 %}
+                            <span style="color: navy;">(&ndash;{{ -delay }})</span>                       
+                        {% elif delay < 0 %}
+                            <span style="color: blue;">(&ndash;{{ -delay }})</span>
+                        {% endif %}
+                    {% else %}
+                        {{ actual_time_str }} (?)  
+                    {% endif %}
+                {% endif %}
+                </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if min_trip_delay is not none %}
+    <p>
+        Najmniejsze opóźnienie: {{ min_trip_delay|round(2) }} min<br>
+        Średnie opóźnienie: {{ avg_trip_delay|round(2) }} min<br>
+        Największe opóźnienie: {{ max_trip_delay|round(2) }} min<br>
+    </p>
+{% endif %}
+
+<p>
+    <strong>Inne kierunki:</strong>
+    {% for alternative_direction in alternative_directions %}
+        <br>
+        <a href="?line={{ line }}&direction={{ alternative_direction }}">{{ line }} &rarr; {{ alternative_direction }}</a>
+    {% endfor %}
+</p>
+
+<a href="/">Wybierz inną linię</a>
+
+</body>
+</html>

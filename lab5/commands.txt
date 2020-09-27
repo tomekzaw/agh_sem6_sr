@@ -1,0 +1,6 @@
+cd /d D:\sr_lab5\apache-zookeeper-3.5.7-bin\bin
+set JAVA_HOME=C:\Program Files\Java\jdk-13
+zkServer2 \zoo1.cfg
+zkCli -server 127.0.0.1:2181
+telnet localhost 2181
+srvr

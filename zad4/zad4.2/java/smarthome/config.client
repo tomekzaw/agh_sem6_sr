@@ -1,0 +1,7 @@
+TempSensor1.Proxy=tempSensor/tempSensor1:tcp -h localhost -p 10000:udp -h localhost -p 10000
+TempSensor2.Proxy=tempSensor/tempSensor2:tcp -h localhost -p 10000:udp -h localhost -p 10000
+
+PTZCamera1.Proxy=camera/camera1:tcp -h localhost -p 10000:udp -h localhost -p 10000
+PTZCamera2.Proxy=camera/camera2:tcp -h localhost -p 10000:udp -h localhost -p 10000
+
+Bulbulator1.Proxy=bulbulator/bulbulator1:tcp -h localhost -p 10000:udp -h localhost -p 10000

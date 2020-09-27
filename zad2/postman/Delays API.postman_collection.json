@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "3ce18ad8-99d5-43d0-bf91-9c125d5852de",
+		"name": "Delays API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=999",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=999",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=999&direction=abc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=999&direction=abc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "999"
+						},
+						{
+							"key": "direction",
+							"value": "abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=664&direction=abc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=664&direction=abc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "664"
+						},
+						{
+							"key": "direction",
+							"value": "abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=664&direction=Os.Piastów",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=664&direction=Os.Piastów",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "664"
+						},
+						{
+							"key": "direction",
+							"value": "Os.Piastów"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=3&direction=Krowodrza Górka",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=3&direction=Krowodrza Górka",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "3"
+						},
+						{
+							"key": "direction",
+							"value": "Krowodrza Górka"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=52&direction=Os.Piastów",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=52&direction=Os.Piastów",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "52"
+						},
+						{
+							"key": "direction",
+							"value": "Os.Piastów"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=114&direction=Chełmońskiego Pętla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=114&direction=Chełmońskiego Pętla",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "114"
+						},
+						{
+							"key": "direction",
+							"value": "Chełmońskiego Pętla"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=116&direction=Kozienicka",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=116&direction=Kozienicka",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "116"
+						},
+						{
+							"key": "direction",
+							"value": "Kozienicka"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=144&direction=Rżąka",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=144&direction=Rżąka",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "144"
+						},
+						{
+							"key": "direction",
+							"value": "Rżąka"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delays?line=203&direction=Czerwone Maki P+R",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/delays?line=203&direction=Czerwone Maki P+R",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"delays"
+					],
+					"query": [
+						{
+							"key": "line",
+							"value": "203"
+						},
+						{
+							"key": "direction",
+							"value": "Czerwone Maki P+R"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

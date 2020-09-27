@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rozkłady jazdy</title>
+</head>
+<body>
+<form action="/api/v1/delays" method="get">
+    <label for="line">Linia:</label>
+    <input type="text" name="line" id="line">
+    <br>    
+    <label for="direction">Kierunek:</label>
+    <input type="text" name="direction" id="direction">
+    <br>
+    <button type="submit">Wyślij</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Adapter1.Endpoints=tcp -h localhost -p 10000:udp -h localhost -p 10000
+Adapter1.ThreadPool.Size=4
